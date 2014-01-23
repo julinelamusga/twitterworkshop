@@ -1,0 +1,6 @@
+<%= form_for @tweet do |f| %>
+  <%= f.text_field :content, required: true %>
+  <%= f.submit "Tweet" %>
+<% end %>
+
+<%= link_to "Your tweets", tweets_path %>

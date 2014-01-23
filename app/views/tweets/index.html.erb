@@ -1,0 +1,10 @@
+<ul>
+  <% @tweets.each do |tweet| %>
+    <li>
+      <%= tweet.content %>
+      <small><%= time_ago_in_words(tweet.created_at) %> ago</small>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "New tweet", new_tweet_path %>
